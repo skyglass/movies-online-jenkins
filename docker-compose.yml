@@ -4,6 +4,8 @@ services:
   sonarqube:
     image: sonarqube
     platform: linux/amd64
+    networks:
+      - jenkins    
     depends_on:
       - db
     environment:
@@ -20,6 +22,8 @@ services:
   db:
     image: postgres:12
     platform: linux/amd64
+    networks:
+      - jenkins    
     environment:
       POSTGRES_USER: sonar
       POSTGRES_PASSWORD: sonar
@@ -35,5 +39,5 @@ volumes:
   postgresql_data:
 
 networks:
-  default:
-    name: jenkins  
+  jenkins:
+    driver: bridge

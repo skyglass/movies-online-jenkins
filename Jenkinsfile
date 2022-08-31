@@ -1,1 +1,20 @@
-pipeline {  agent any  stages {    stage('SCA') {      agent {        docker {          image 'sonarsource/sonar-scanner-cli:latest'        }      }      steps {        echo "Steps to execute SCA"        withSonarQubeEnv(installationName: 'sonarqube', credentialsId: 'sonarqube') {          sh 'sonar-scanner -Dsonar.projectVersion=1.0 -Dsonar.projectKey=react-bmi-app -Dsonar.sources=src -Dsonar.host.url=http://sonarqube:9000'        }        waitForQualityGate(abortPipeline: true, credentialsId: 'sonarqube')      }    }  }}
+pipeline {
+  agent any
+
+  stages {
+    stage('SCA') {
+      agent {
+        docker {
+          image 'sonarsource/sonar-scanner-cli:latest'
+        }
+      }
+      steps {
+        echo "Steps to execute SCA"
+        withSonarQubeEnv(installationName: 'sonarqube', credentialsId: 'sonarqube') {
+          sh 'sonar-scanner -Dsonar.projectVersion=1.0 -Dsonar.projectKey=react-bmi-app -Dsonar.sources=src -Dsonar.host.url=http://localhost:9000'
+        }
+        waitForQualityGate(abortPipeline: true, credentialsId: 'sonarqube')
+      }
+    }
+  }
+}
