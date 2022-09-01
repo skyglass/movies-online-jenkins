@@ -12,6 +12,7 @@
             stage('NPM') {
             steps {
                 sh 'ls -a; node --version'
+                sh 'npm install --cache .npm'
                 sh 'npm ci --cache .npm'
             }
             } 
