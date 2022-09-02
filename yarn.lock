@@ -6406,6 +6406,15 @@
     "pretty-format" "^24.9.0"
     "throat" "^4.0.0"
 
+"jest-junit@^4.0.0":
+  "integrity" "sha512-Qb+h3a9DkZjlggv9JbY/AVLiiQ7CQB5/IJoMxWtOE/SXgQQMMbHdnlbAN1+w/2mAY8KgNtuLnrfMa5Lk5Wx6VQ=="
+  "resolved" "https://registry.npmjs.org/jest-junit/-/jest-junit-4.0.0.tgz"
+  "version" "4.0.0"
+  dependencies:
+    "mkdirp" "^0.5.1"
+    "strip-ansi" "^4.0.0"
+    "xml" "^1.0.1"
+
 "jest-leak-detector@^24.9.0":
   "integrity" "sha512-tYkFIDsiKTGwb2FG1w8hX9V0aUb2ot8zY/2nFg087dUageonw1zrLMP4W6zsRO59dPkTSKie+D4rhMuP9nRmrA=="
   "resolved" "https://registry.npmjs.org/jest-leak-detector/-/jest-leak-detector-24.9.0.tgz"
@@ -11885,6 +11894,11 @@
   "integrity" "sha512-A5CUptxDsvxKJEU3yO6DuWBSJz/qizqzJKOMIfUJHETbBw/sFaDxgd6fxm1ewUaM0jZ444Fc5vC5ROYurg/4Pw=="
   "resolved" "https://registry.npmjs.org/xml-name-validator/-/xml-name-validator-3.0.0.tgz"
   "version" "3.0.0"
+
+"xml@^1.0.1":
+  "integrity" "sha512-huCv9IH9Tcf95zuYCsQraZtWnJvBtLVE0QHMOs8bWyZAFZNDcYjsPq1nEx8jKA9y+Beo9v+7OBPRisQTjinQMw=="
+  "resolved" "https://registry.npmjs.org/xml/-/xml-1.0.1.tgz"
+  "version" "1.0.1"
 
 "xmlchars@^2.1.1":
   "integrity" "sha512-7hew1RPJ1iIuje/Y01bGD/mXokXxegAgVS+e+E0wSi2ILHQkYAH1+JXARwTjZSM4Z4Z+c73aKspEcqj+zPPL/w=="
