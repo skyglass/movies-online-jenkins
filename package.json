@@ -12,7 +12,8 @@
     "react-chartjs-2": "2.8.0",
     "react-dom": "16.11.0",
     "react-scripts": "3.1.1",
-    "uuid": "3.3.3"
+    "uuid": "3.3.3",
+    "jest": "24.8.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -47,6 +48,8 @@
     ]
   },
   "devDependencies": {
+    "babel-jest": "^24.8.0",
+    "eslint": "^6.1.0",
     "codecov.io": "^0.1.6",
     "coveralls": "^3.0.11",
     "cypress": "^3.8.3",
