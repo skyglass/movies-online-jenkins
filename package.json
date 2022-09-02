@@ -18,7 +18,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest --coverage --coverageDirectory=output/coverage/jest",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
@@ -30,6 +30,10 @@
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
       "!src/index.js"
+    ],
+"coverageReporters": [
+      "text",
+      "cobertura"
     ]
   },
   "eslintConfig": {
