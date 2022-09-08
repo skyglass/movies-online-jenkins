@@ -4,16 +4,16 @@
   "private": true,
   "homepage": "http://GermaVinsmoke.github.io/bmi-calculator",
   "dependencies": {
-    "@types/jest": "24.0.20",
-    "chart.js": "2.9.1",
+    "@types/jest": "29.0.0",
+    "chart.js": "3.9.1",
     "materialize-css": "1.0.0",
-    "prop-types": "15.7.2",
-    "react": "16.11.0",
-    "react-chartjs-2": "2.8.0",
-    "react-dom": "16.11.0",
-    "react-scripts": "3.1.1",
-    "uuid": "3.3.3",
-    "jest": "24.8.0"
+    "prop-types": "15.8.1",
+    "react": "^16.0.0",
+    "react-chartjs-2": "4.3.1",
+    "react-dom": "^16.0.0",
+    "react-scripts": "1.0.14",
+    "uuid": "8.3.2",
+    "jest": "29.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -31,13 +31,16 @@
       "src/**/*.{js,jsx}",
       "!src/index.js"
     ],
-"coverageReporters": [
+    "coverageReporters": [
       "text",
       "cobertura"
-    ]
+    ],
+    "transform": {
+       "^.+\\.(js|jsx)$": "babel-jest"
+    }
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": ["react-app", "plugin:cypress/recommended"]
   },
   "browserslist": {
     "production": [
@@ -52,16 +55,20 @@
     ]
   },
   "devDependencies": {
-    "babel-jest": "^24.8.0",
-    "eslint": "^6.1.0",
+    "@babel/plugin-proposal-class-properties": "^7.10.1",
+    "@babel/preset-env": "^7.10.1",
+    "@babel/preset-react": "^7.10.1",
+    "@babel/plugin-transform-runtime": "^7.10.1",
+    "babel-jest": "^29.0.1",
+    "eslint": "^8.23.0",
     "codecov.io": "^0.1.6",
-    "coveralls": "^3.0.11",
-    "cypress": "^3.8.3",
+    "coveralls": "^3.1.1",
+    "cypress": "^10.7.0",
     "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.2",
-    "eslint-plugin-cypress": "^2.10.3",
-    "gh-pages": "^2.2.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "eslint-plugin-cypress": "^2.12.1",
+    "gh-pages": "^4.0.0",
     "jest-enzyme": "^7.1.2",
-    "jest-junit": "^4.0.0"
+    "jest-junit": "^14.0.1"
   }
 }
